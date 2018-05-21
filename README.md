@@ -1,5 +1,5 @@
 # WathchGuard_mission
-Solution: get the HTML page through the requets library, parse the contents of the HTML through beautiful soup and etree, and then store the extracted content in a CSV file.
+Solution: get the HTML page through the requests library, parse the contents of the HTML through beautiful soup and etree, and then store the extracted content in a CSV file.
 
 
 
