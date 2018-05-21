@@ -122,5 +122,4 @@ class GetPerformanceData(object):
 
 if __name__ == "__main__":
     gpd = GetPerformanceData()
-    for series in gpd.series:
-        gpd.store_series_product_performance_data(series)
+    gpd.store_series_product_performance_data(gpd.series[1])
