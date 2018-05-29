@@ -1,11 +1,11 @@
 # coding=utf-8
 
-__author__ = 'Yang Zhang'
-
 import requests
 import re
 from bs4 import BeautifulSoup
 from lxml import etree
+
+requests.packages.urllib3.disable_warnings()
 
 
 class GetPerformanceData(object):
