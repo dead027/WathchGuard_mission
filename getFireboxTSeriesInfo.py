@@ -4,7 +4,9 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from lxml import etree
-
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 requests.packages.urllib3.disable_warnings()
 
 
@@ -41,10 +43,10 @@ class GetPerformanceData(object):
         soup = BeautifulSoup(get_rtn.content, "html.parser")
         # deal with LEGACY PRODUCTS
         if series not in [self.series[4], self.series[5], self.series[6]]:
-            elements = soup.select("select#p1 optgroup[label='%s']" % series.encode("utf-8"))
+            elements = soup.select("select#p1 optgroup[label='%s']" % series)
             elements = elements[0].find_all("option")
         else:
-            elements = soup.select("select#p1 optgroup[label='%s']" % series[15:].encode("utf-8"))
+            elements = soup.select("select#p1 optgroup[label='%s']" % series[15:])
             elements = elements[1].find_all("option")
         # get all options
         product_list = []
